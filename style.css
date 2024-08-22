@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+
+.navbar {
+    height: 100px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    height: 70px;
+    width: 70px;
+    margin-left: 10px;
+    margin-right: 200px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: right;
+    align-items:end;
+}
+
+.icons {
+    margin-right: 50px;
+}
+

@@ -32,5 +32,6 @@ editTask = (taskId) => {
 };
 
 deleteTask = (taskId) => {
-  
+  const element = document.getElementById(`task${taskId}`);
+  element.parentNode.removeChild(element);
 };

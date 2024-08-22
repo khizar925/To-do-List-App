@@ -9,26 +9,33 @@ addTask = () => {
   const text = document.getElementById("input-form");
   Data.taskText = text.value;
   const taskContainer = document.querySelector(".tasks");
+
   const newTask = document.createElement("div");
-  newTask.innerHTML = `<div class="task-list">
-    <div id="task${Data.taskId}">
-      <span id="Task-${Data.taskId}">${Data.taskText}</span>
-      <button onclick="editTask(${Data.taskId})">Edit</button>
-      <button onclick="deleteTask(${Data.taskId})">Delete</button>
-      <button onclick="completed(${Data.taskId})">Mark as Complete</button>
-      <br><br>
-    </div>
-  </div>`;
+  newTask.className = "task-list";
+  newTask.id = `task${Data.taskId}`;
+  newTask.innerHTML = `
+  <span id="Task-${Data.taskId}">${Data.taskText}</span>
+  <div>
+    <button onclick="editTask(${Data.taskId})">Edit</button>
+    <button onclick="deleteTask(${Data.taskId})">Delete</button>
+    <button onclick="completed(${Data.taskId})">Complete</button>
+  </div>
+`;
+
   text.value = "";
   taskContainer.appendChild(newTask);
   console.log(Data);
 };
 
+// Edit, delete, and completed functions remain the same as before
+
 editTask = (taskId) => {
   const taskSpan = document.getElementById(`Task-${taskId}`);
   const currentText = taskSpan.textContent;
   const newText = prompt("Edit Your Task: ", currentText);
-  taskSpan.textContent = newText;
+  if (newText !== null) {
+    taskSpan.textContent = newText;
+  }
 };
 
 deleteTask = (taskId) => {

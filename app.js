@@ -35,3 +35,10 @@ deleteTask = (taskId) => {
   const element = document.getElementById(`task${taskId}`);
   element.parentNode.removeChild(element);
 };
+
+completed = (taskId) => {
+  const element = document.getElementById(`Task-${taskId}`);
+  element.style.textDecoration = "line-through";
+  element.style.opacity = "0.5";
+  element.style.color = "#6c757d";
+};

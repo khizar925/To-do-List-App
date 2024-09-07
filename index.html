@@ -4,27 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-do-List</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Responsive To-Do-List</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <center>
+    <div class="container">
         <div class="title">
             <h1>To-Do-List WebApp</h1>
-            <br>
         </div>
 
         <div class="input">
             <input type="text" placeholder="Enter Task" id="input-form">
-            <button onclick="addTask()">Add</button>
+            <button class="add-btn" onclick="addTask()">Add</button>
         </div>
 
-        <div class="tasks">
-            <h4></h4>
-        </div>
-    </center>
+        <div class="tasks"></div>
+    </div>
     <script src="app.js"></script>
 </body>
 
